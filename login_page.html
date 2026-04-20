@@ -2,6 +2,46 @@
 <html>
   <head>
     <title>Discord</title>
+    <style>
+      *{
+        margin : 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      html, body{
+        height: 100%;
+        width: 100%;
+      }
+
+      .js-container{
+        background-color: aqua;
+        position: relative;
+      }
+
+      #discord{
+        margin-left: 40px;
+        margin-top: 20px;
+      }
+
+      #main_login_box{
+        position: absolute;
+        right: 30%;
+        height: 400px;
+        width: 800px;
+        padding: 20px;
+        background-color: antiquewhite;
+        margin: 150px 100px;
+      }
+
+      #login{
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: rgb(42, 42, 125);
+      }
+
+    </style>
   </head>
   <body>
     <div class="js-container"></div>
@@ -14,7 +54,9 @@
 
       function Title (){
         return (
-          <h4>Discord</h4>
+          <h3 id="discord">
+            <b>Discord</b>
+          </h3>
         )
       }
 
@@ -45,7 +87,7 @@
               Forgot your Password?
             </h5>
 
-            <button>
+            <button id="login">
               Login
             </button>
 
@@ -58,7 +100,7 @@
 
       function Login_box (){
         return(
-          <div>
+          <div id="main_login_box">
             <Login_attributes />
           </div>
         )
