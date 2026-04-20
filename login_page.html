@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Discord</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+      function Title (){
+        return (
+          <h4>Discord</h4>
+        )
+      }
+
+      function Login_attributes () {
+        return(
+          <>
+            <h1>
+              Welcome Back !
+            </h1>
+
+            <h3>
+              We are so excited to see you again !
+            </h3>
+
+            <h2>
+              Email or Phone No.
+            </h2> 
+            
+            <input />
+
+            <h2>
+              Password
+            </h2>
+
+            <h5>
+              Forgot your Password?
+            </h5>
+
+            <button>
+              Login
+            </button>
+
+            <h5>
+              Need an account? <u>Register</u>
+            </h5>
+          </>
+        )
+      }
+
+      function Login_box (){
+        return(
+          <div>
+            <Login_attributes />
+          </div>
+        )
+      }
+
+      function LOGIN (){
+        return(
+          <>
+            <Title />
+            <Login_box />
+          </>
+        )
+      }
+
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(<LOGIN />);
+    </script>
+  </body>
+</html>
