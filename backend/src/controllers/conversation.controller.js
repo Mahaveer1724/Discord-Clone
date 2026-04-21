@@ -1,5 +1,6 @@
 const isLoggedIn = require('../middlewares/isLoggedIn.middleware.js')
 const conversationModel = require('../models/conversation.model.js')
+const messageModel = require('../models/message.model.js')
 const participantModel = require('../models/participants.model.js')
 const userModel = require('../models/user.model.js')
 const createDMKey = require('../services/dmKey.service.js')
@@ -41,11 +42,52 @@ const dmConversation = async (req, res) => {
         .find({ conversationId: conversation._id })
         .select('userId')
         .populate('userId', '_id username')
-        
+
     return res.status(201).json({
         message: "DM created successfully",
         conversation, members
     })
 }
 
-module.exports = { dmConversation }
+const sendMessage = async (req, res) => {
+    const userId = req.user.id
+    const { convId, content } = req.body
+
+    if (!convId, !content) {
+        return res.status(400).json({ message: "conversationId and content required" })
+    }
+
+    const conversation = await conversationModel.findById(convId)
+
+    if (!conversation) {
+        return res.status(400).json({ message: "conversation is not found" })
+    }
+
+    const isParticipant = await participantModel.findOne({
+        userId,
+        conversationId: convId
+    })
+
+    if (!isParticipant) {
+        return res.status(400).json({ message: "participants not found" })
+    }
+
+    const message = await messageModel.create({
+        convId,
+        senderId: userId,
+        content
+    })
+
+    await conversationModel.findByIdAndUpdate(convId, {
+        lastMessage: content,
+        lastMessageAt: new Date()
+    })
+
+    return res.status(201).json({
+        message: "Message sent",
+        message
+    })
+
+}
+
+module.exports = { dmConversation, sendMessage }
