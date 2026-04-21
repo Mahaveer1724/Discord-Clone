@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main_area {
+    height: 350px;
+    width: 700px;
+    margin-top: 200px;
+    margin-left: 420px;
+    background-color: aqua;
+    padding: 10px;
+    position: relative;
+}
+
+#Attributes {
+    background-color: rgb(147, 110, 61);
+    position: absolute;
+    height: 330px;
+    width: 390px;
+}
+
+#side_div {
+    height: 330px;
+    width: 290px;
+    background-color: bisque;
+    position: absolute;
+    margin-left: 390px;
+}
+
+#Head {
+    height: 50px;
+    width: 200px;
+    background-color: rgb(107, 41, 41);
+}
+
