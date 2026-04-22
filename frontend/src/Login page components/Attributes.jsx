@@ -3,35 +3,35 @@ import React from 'react'
       function Attributes () {
         return(
           <>
-            <h1>
+            <h2 id="welcome">
               Welcome Back !
-            </h1>
+            </h2>
 
-            <h3>
+            <h3 id="comment">
               We are so excited to see you again !
             </h3>
 
-            <h2>
+            <h3 class="keys">
               Email or Phone No.
-            </h2> 
+            </h3> 
             
-            <input />
+            <input class="inputs" />
 
-            <h2>
+            <h3 class="keys">
               Password
-            </h2>
+            </h3>
 
-            <input />
+            <input class="inputs" />
 
-            <h5>
+            <h5 id="forgot">
               Forgot your Password?
             </h5>
 
             <button id="login">
-              Login
+              Log In
             </button>
 
-            <h5>
+            <h5 id="register">
               Need an account? <u>Register</u>
             </h5>
           </>
