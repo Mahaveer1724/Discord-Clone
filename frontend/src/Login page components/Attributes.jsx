@@ -1,41 +1,60 @@
-import React from 'react'   
+import React, { useState } from "react";
+import axios from "axios";
 
-      function Attributes () {
-        return(
-          <>
-            <h2 id="welcome">
-              Welcome Back !
-            </h2>
+function Attributes() {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
 
-            <h3 id="comment">
-              We are so excited to see you again !
-            </h3>
+  const handleChange = (e) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
 
-            <h3 class="keys">
-              Email or Phone No.
-            </h3> 
-            
-            <input class="inputs" />
+  const handleClick = async (e) => {
+    try {
+      const resp = await axios.post('http://localhost:3000/api/auth/login', formData, {
+        withCredentials: true
+      })
+      console.log(resp)
+    } catch (error) {
+      console.log(error)
+    }
+  };
 
-            <h3 class="keys">
-              Password
-            </h3>
+  return (
+    <>
+      <h2 id="welcome">Welcome Back !</h2>
 
-            <input class="inputs" />
+      <h3 id="comment">We are so excited to see you again !</h3>
 
-            <h5 id="forgot">
-              Forgot your Password?
-            </h5>
+      <h3 className="keys">Email or Phone No.</h3>
 
-            <button id="login">
-              Log In
-            </button>
+      <input
+        className="inputs"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+      />
 
-            <h5 id="register">
-              Need an account? <u>Register</u>
-            </h5>
-          </>
-        )
-      }
+      <h3 className="keys">Password</h3>
 
-export default Attributes
+      <input
+        className="inputs"
+        name="password"
+        value={formData.password}
+        onChange={handleChange}
+      />
+
+      <h5 id="forgot">Forgot your Password?</h5>
+
+      <button id="login" onClick={handleClick}>Log In</button>
+
+      <h5 id="register">
+        Need an account? <u>Register</u>
+      </h5>
+    </>
+  );
+}
+
+export default Attributes;
