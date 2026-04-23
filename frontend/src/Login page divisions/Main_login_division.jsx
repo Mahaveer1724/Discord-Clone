@@ -10,7 +10,9 @@ function Main_Login_Division (){
                 </div>
 
                 <div id="side_div">
-
+                    <h3 id="Side_comment">Enjoy the Community !</h3>
+                    <h4 id="message1">Hope you enjoy this platform</h4>
+                    <h4 id="message2">Stay tuned</h4>
                 </div>
             </div>
         </>
