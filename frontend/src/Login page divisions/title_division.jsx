@@ -1,5 +1,5 @@
 import React from "react";
-import Title from "../../Components/Title";
+import Title from "../Login page components/Title";
 
 function Title_division (){
     return(

@@ -1,5 +1,5 @@
 import React from "react";
-import Attributes from "../../Components/Attributes";
+import Attributes from "../Login page components/Attributes";
 
 function Main_Login_Division (){
     return(
