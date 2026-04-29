@@ -1,5 +1,4 @@
 import React from "react"
-import tailwindcss from "@tailwindcss/vite"
 
 function Main_registration_division (){
     return(

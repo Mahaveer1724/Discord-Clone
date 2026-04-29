@@ -1,9 +1,9 @@
 import React from "react";
-import Title from "../Login page components/Title";
+import Title from '../../Login page components/Title.jsx'
 
 function Title_division (){
     return(
-         <div id="Head">
+        <div id="Head">
             <Title />
          </div>
     )

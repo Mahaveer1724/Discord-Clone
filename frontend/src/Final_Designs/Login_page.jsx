@@ -1,8 +1,7 @@
 import React from 'react'
-import Attributes from '../Login page components/Attributes'
-import Title from '../Login page components/Title'
-import Main_Login_Division from '../Login page divisions/Main_login_division'
-import Title_division from '../Login page divisions/title_division'
+import Main_Login_Division from '../Components/Divisions/Login_page_divisions/Main_login_division.jsx'
+import Title_division from '../Components/Divisions/Login_page_divisions/title_division.jsx'
+
 
 const Login_page = () => {
   return (
