@@ -2,10 +2,8 @@ import React from "react"
 
 function Main_registration_division (){
     return(
-        <div>
-            <p className="text-[50px]">
-                Hello
-            </p>
+        <div class="bg-yellow-400 length-[50px]" >
+            
         </div>
     )
 }
