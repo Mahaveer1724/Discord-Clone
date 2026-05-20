@@ -23,7 +23,7 @@ function LoginForm(){
 
             <input className="rounded-lg border-[0.1px] border-[#6e6b6b] w-[26.5rem] h-[2.6rem] mb-2 bg-[#35353c] focus:ring-0 focus:outline-0 transition-colors delay-50 focus:border-[#4451da] -translate-x-[-2rem]" />
 
-            <h5 className="text-[0.9rem] text-[#7987c8] mb-5 -translate-x-[-2rem] hover:cursor-pointer">
+            <h5 className="text-[0.9rem] text-[#7987c8] mb-5 -translate-x-[-2rem] hover:cursor-pointer hover:underline">
                 Forgot your password?
             </h5>
 
@@ -32,7 +32,7 @@ function LoginForm(){
             </button>
 
             <h5 className="text-[0.9rem] -translate-x-[-2rem]">
-                Need an account? <a className="text-[#7987c8]" href="/">Register</a>
+                Need an account? <a className="text-[#7987c8] hover:underline" href="/">Register</a>
             </h5>                      
         </form>
     )
