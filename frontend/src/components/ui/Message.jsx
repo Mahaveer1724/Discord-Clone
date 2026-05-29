@@ -7,8 +7,7 @@ function Messages (){
 
             </div>
 
-            <input className="h-[4rem] w-[53rem] absolute bg-amber-50 rounded-lg -translate-x-[-1rem] -translate-y-[-47rem]">
-
+            <input className="h-[4rem] w-[53rem] absolute rounded-lg -translate-x-[-1rem] -translate-y-[-47rem] p-8 font-['gg_sans','Noto_Sans','Helvetica_Neue',Helvetica,Arial,sans-serif] bg-[#131416] text-[#888991]" defaultValue="Message Jailer">
             </input>
         </div>
     )
